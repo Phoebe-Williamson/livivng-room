@@ -47,7 +47,7 @@ public class lamps
         if(action.equals("clicked")) {
             // check the lot of x and y again and the lot of theobj
             for (lamp lamp : livingRoom) {
-                if (lamp.onBulb(x,y)) {
+                if (lamp.isOnBulb(x,y)) {
                     lamp.changeColour();
                     lamp.draw();
                 }
