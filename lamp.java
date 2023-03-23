@@ -139,6 +139,14 @@ public class lamp {
     }
     
     /**
+     * tuen on
+     */
+    public void turnOn() {
+        lampOn = true;
+        this.color = Color.yellow;    
+    }
+    
+    /**
      * returns the boolean
      * depends on whether the x y pos is on the lamp stem
      */

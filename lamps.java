@@ -59,7 +59,7 @@ public class lamps
                         lamp.draw();
                     }
                     else {
-                        lamp.changeColour();
+                        lamp.turnOn();
                         lamp.draw();
                     }
                 }
