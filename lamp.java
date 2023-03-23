@@ -26,7 +26,7 @@ public class lamp {
     private boolean lampOn = false;
     private boolean onStem = false;
     
-    
+
     /**
      * Constructor for objects of class lamp
      */
@@ -94,7 +94,7 @@ public class lamp {
      * draw the lamp on the canvas
      */
     public void draw() {
-        final int STEMWIDTH = 2;
+        final int STEMWIDTH = 5;
         
         // draw stem
         UI.setColor(Color.gray);        // set color of the stem
@@ -117,25 +117,6 @@ public class lamp {
             return false;
         }
     }
-    
-    /** turn on
-     * 
-     */
-    public void turnOn(){
-        if(onStem = true){
-            lampOn = true;
-            
-        }
-        
-    }
-    
-    /** turn off
-     * 
-     */
-    public void turnOff(){
-        
-        
-    }
    
     /**
      * returns the boolean
@@ -147,6 +128,13 @@ public class lamp {
         } else {
             return false;
         }
+    }
+    
+    /**
+     * tuen off
+     */
+    public void turnOff() {
+        this.color = Color.black;    
     }
     
     /**
@@ -166,6 +154,13 @@ public class lamp {
      */
     public void changeColour() {
         this.color = Color.getHSBColor((float)(Math.random()), 1.0f, 1.0f);
+    }
+    
+    /**
+     * get bgdfjks
+     */
+    public boolean getIsOn(){
+        return lampOn;
     }
     
 }

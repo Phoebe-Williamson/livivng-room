@@ -29,7 +29,7 @@ public class lamps
         for (int i = 0; i < MAXLAMPS; i++) {
             // draw each lamp
             Color col = Color.black;
-            livingRoom[i] = new lamp(STARTX*(i+1), YPOS, 20, 50, col);
+            livingRoom[i] = new lamp(STARTX*(i+1), YPOS, 30, 75, col);
         }
         
         // draw each lamp
@@ -48,7 +48,12 @@ public class lamps
             // check the lot of x and y again and the lot of theobj
             for (lamp lamp : livingRoom) {
                 if (lamp.isOnBulb(x,y)) {
+                    if (
                     lamp.changeColour();
+                    lamp.draw();
+                }
+                else if(lamp.onStem(x,y)) {
+                    lamp.turnOff();
                     lamp.draw();
                 }
             }
