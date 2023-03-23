@@ -48,13 +48,20 @@ public class lamps
             // check the lot of x and y again and the lot of theobj
             for (lamp lamp : livingRoom) {
                 if (lamp.isOnBulb(x,y)) {
-                    if (
-                    lamp.changeColour();
-                    lamp.draw();
+                    if (lamp.getIsOn()) {
+                        lamp.changeColour();
+                        lamp.draw();
+                    }
                 }
                 else if(lamp.onStem(x,y)) {
-                    lamp.turnOff();
-                    lamp.draw();
+                    if (lamp.getIsOn()) {
+                        lamp.turnOff();
+                        lamp.draw();
+                    }
+                    else {
+                        lamp.changeColour();
+                        lamp.draw();
+                    }
                 }
             }
         }

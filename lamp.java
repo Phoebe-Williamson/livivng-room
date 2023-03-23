@@ -134,6 +134,7 @@ public class lamp {
      * tuen off
      */
     public void turnOff() {
+        lampOn = false;
         this.color = Color.black;    
     }
     
@@ -153,6 +154,7 @@ public class lamp {
      * switch color
      */
     public void changeColour() {
+        lampOn = true;
         this.color = Color.getHSBColor((float)(Math.random()), 1.0f, 1.0f);
     }
     
